@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-export default (req: Request, res: Response) => {
-	console.log(res.locals.utils);
-	res.send("Ok");
+import { ModifiedResponse } from "../../../types";
+import { Request } from "express";
+export default (req: Request, res: ModifiedResponse) => {
+	return res.send(res.locals.user);
 };

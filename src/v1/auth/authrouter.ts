@@ -2,7 +2,7 @@ import express, { Request, Response, Router } from "express";
 import login from "./login";
 import register from "./register";
 import detail from "./detail";
-import refresh from "./refresh";
+import auth from "../../utils/auth";
 const authrouter: Router = express.Router();
 authrouter.all("/", (_req: Request, res: Response) => {
 	return res.status(200).json({
@@ -13,14 +13,13 @@ authrouter.all("/", (_req: Request, res: Response) => {
 				login: "./login",
 				register: "./register",
 				detail: "./detail",
-				refresh: "./refresh",
 			},
 		},
 	});
 });
 authrouter.post("/login", login);
 authrouter.post("/register", register);
+authrouter.use(auth);
 authrouter.get("/detail", detail); //Provide a token in the header
-authrouter.get("/refresh", refresh); //provide refresh token in the header
 
 export default authrouter;

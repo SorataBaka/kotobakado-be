@@ -1,12 +1,15 @@
 import mongoose from "mongoose";
-const schema = new mongoose.Schema({
+import { User } from "../../types";
+const schema = new mongoose.Schema<User>({
 	username: {
 		type: String,
 		required: true,
+		unique: true,
 	},
 	emailHash: {
 		type: String,
 		required: true,
+		unique: true,
 	},
 	passwordHash: {
 		type: String,
@@ -18,4 +21,4 @@ const schema = new mongoose.Schema({
 		required: true,
 	},
 });
-export default mongoose.model("user-collection", schema);
+export default mongoose.model<User>("user-collection", schema);

@@ -1,15 +1,19 @@
 import express, { NextFunction, Request, Response } from "express";
 import versionrouter from "./src/versionroute";
+import verify from "./src/utils/auth";
+import bodyParser from "body-parser";
 import Database from "./db/dbclass";
 import dotenv from "dotenv";
-import bodyParser from "body-parser";
 const app = express();
 dotenv.config();
-
 const utils = {
 	database: new Database({
 		MONGO_URI: process.env.MONGO_URI as string,
 	}),
+	auth: {
+		secretkey: process.env.SECRET_KEY as string,
+		verifyjwt: verify,
+	},
 };
 const prepare = (req: Request, res: Response, next: NextFunction) => {
 	res.locals = utils;

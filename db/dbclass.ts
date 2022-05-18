@@ -1,6 +1,6 @@
 import mongoose, { Mongoose } from "mongoose";
 import userschema from "./schemas/userschema";
-import { DatabaseInterface, DatabaseParameters } from "../types";
+import { DatabaseInterface, DatabaseParameters, User } from "../types";
 import joi from "joi";
 const schema = joi.object({
 	MONGO_URI: joi.string().required(),
@@ -8,7 +8,7 @@ const schema = joi.object({
 export default class Database implements DatabaseInterface {
 	public mongodb: Mongoose;
 	public schemas: {
-		user: mongoose.Model<mongoose.Document>;
+		user: mongoose.Model<User>;
 	} = {
 		user: userschema,
 	};
