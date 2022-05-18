@@ -2,6 +2,7 @@ import express, { NextFunction, Request, Response } from "express";
 import versionrouter from "./src/versionroute";
 import Database from "./db/dbclass";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 const app = express();
 dotenv.config();
 
@@ -17,6 +18,7 @@ const prepare = (req: Request, res: Response, next: NextFunction) => {
 
 app.use(express.json());
 app.use(prepare);
+app.use(bodyParser.json());
 app.use("/api", versionrouter);
 
 app.all("/", (_req: Request, res: Response) => {
