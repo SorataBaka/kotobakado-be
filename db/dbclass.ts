@@ -1,6 +1,7 @@
 import mongoose, { Mongoose } from "mongoose";
 import userschema from "./schemas/userschema";
-import { DatabaseInterface, DatabaseParameters, User } from "../types";
+import kotobaschema from "./schemas/kotobaschema";
+import { DatabaseInterface, DatabaseParameters, Kotoba, User } from "../types";
 import joi from "joi";
 const schema = joi.object({
 	MONGO_URI: joi.string().required(),
@@ -9,8 +10,10 @@ export default class Database implements DatabaseInterface {
 	public mongodb: Mongoose;
 	public schemas: {
 		user: mongoose.Model<User>;
+		kotoba: mongoose.Model<Kotoba>;
 	} = {
 		user: userschema,
+		kotoba: kotobaschema,
 	};
 	constructor(param: DatabaseParameters) {
 		const validation = schema.validate(param);

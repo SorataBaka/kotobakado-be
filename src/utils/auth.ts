@@ -5,7 +5,12 @@ const secretkey = process.env.SECRET_KEY;
 const tokenType = process.env.TOKEN_TYPE;
 const issuer = process.env.TOKEN_ISSUER;
 const audience = process.env.TOKEN_AUDIENCE;
-if (secretkey === undefined || tokenType === undefined)
+if (
+	secretkey === undefined ||
+	tokenType === undefined ||
+	issuer === undefined ||
+	audience === undefined
+)
 	throw new Error("SECRET_KEY or TOKEN_TYPE is not defined in .env file");
 const invalidRequest = (res: Response) => {
 	return res.status(400).json({
@@ -32,8 +37,9 @@ const tokenverifier = joi.object({
 });
 export default async (req: Request, res: Response, next: NextFunction) => {
 	const token = req.headers["authorization"];
+
 	if (token === undefined) return invalidRequest(res);
-	const tokenSplit = token.split(" ");
+	const tokenSplit = (token as string).split(" ");
 	if (tokenSplit.length !== 2) return invalidRequest(res);
 	if (tokenSplit[0] !== tokenType) return invalidRequest(res);
 	try {

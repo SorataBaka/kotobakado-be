@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "92ff16e8-20e3-4eca-9fe0-5be537a8a28c",
+		"name": "Kotoba Kado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15532623"
+	},
+	"item": [
+		{
+			"name": "Save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODQ5NmU4MzFlZTFlZjg0NjhhZmQ5YyIsIm5hbWUiOiJzb3JhdGFiYWthIiwibmJmIjoxNjUzNDE1MjA4LCJpYXQiOjE2NTM0MTUyMDgsImV4cCI6MTY1NDYyNDgwOCwiYXVkIjoiaHR0cHM6Ly9rb3RvYmFrYWRvLmNvbSIsImlzcyI6Imh0dHBzOi8vYXBpLmtvdG9iYWthZG8uY29tIn0.zDLxe_0hD7YUW6YJK96zT1jixWKhYE47WJj9IMVUQIQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"kotobaname\": \"kotoba-1-2\",\r\n\t\"kotobadescription\": \"kotoba-1-2-description\",\r\n\t\"kotobalist\": [\r\n        {\r\n            \"question\": \"kotoba-1-2-1-question\",\r\n            \"answer\": \"kotoba-1-2-1-answer\"\r\n        },\r\n        {\r\n            \"question\": \"kotoba-1-2-2-question\",\r\n            \"answer\": \"kotoba-1-2-2-answer\"\r\n        },\r\n        {\r\n            \"question\": \"kotoba-1-2-3-question\",\r\n            \"answer\": \"kotoba-1-2-3-answer\"\r\n        }\r\n\t]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/kotoba/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"kotoba",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kotoba Detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODQ5NmU4MzFlZTFlZjg0NjhhZmQ5YyIsIm5hbWUiOiJzb3JhdGFiYWthIiwibmJmIjoxNjUzNDE1MjA4LCJpYXQiOjE2NTM0MTUyMDgsImV4cCI6MTY1NDYyNDgwOCwiYXVkIjoiaHR0cHM6Ly9rb3RvYmFrYWRvLmNvbSIsImlzcyI6Imh0dHBzOi8vYXBpLmtvdG9iYWthZG8uY29tIn0.zDLxe_0hD7YUW6YJK96zT1jixWKhYE47WJj9IMVUQIQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/kotoba/detail/628d23c6a7a0b0cbd2565fc1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"kotoba",
+						"detail",
+						"628d23c6a7a0b0cbd2565fc1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODQ5NmU4MzFlZTFlZjg0NjhhZmQ5YyIsIm5hbWUiOiJzb3JhdGFiYWthIiwibmJmIjoxNjUzNDE1MjA4LCJpYXQiOjE2NTM0MTUyMDgsImV4cCI6MTY1NDYyNDgwOCwiYXVkIjoiaHR0cHM6Ly9rb3RvYmFrYWRvLmNvbSIsImlzcyI6Imh0dHBzOi8vYXBpLmtvdG9iYWthZG8uY29tIn0.zDLxe_0hD7YUW6YJK96zT1jixWKhYE47WJj9IMVUQIQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"body\": \"lorem ipsum \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/kotoba/userlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"kotoba",
+						"userlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODQ5NmU4MzFlZTFlZjg0NjhhZmQ5YyIsIm5hbWUiOiJzb3JhdGFiYWthIiwibmJmIjoxNjUzNDE1MjA4LCJpYXQiOjE2NTM0MTUyMDgsImV4cCI6MTY1NDYyNDgwOCwiYXVkIjoiaHR0cHM6Ly9rb3RvYmFrYWRvLmNvbSIsImlzcyI6Imh0dHBzOi8vYXBpLmtvdG9iYWthZG8uY29tIn0.zDLxe_0hD7YUW6YJK96zT1jixWKhYE47WJj9IMVUQIQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/detail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

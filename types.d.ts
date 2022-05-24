@@ -5,6 +5,7 @@ export interface DatabaseInterface {
 	mongodb: Mongoose;
 	schemas: {
 		user: mongoose.Model<User>;
+		kotoba: mongoose.Model<Kotoba>;
 	};
 }
 export interface ModifiedResponse extends Response {
@@ -21,4 +22,17 @@ export interface User extends mongoose.Document {
 	emailHash: string;
 	passwordHash: string;
 	createdDate: Date;
+}
+export interface Kotoba extends mongoose.Document {
+	userid: string;
+	kotobaname: string;
+	kotobadescription: string;
+	kotobalist: {
+		question: string;
+		answer: string;
+	}[];
+	kotobacount: number;
+	createdDate: Date;
+	updatedDate: Date;
+	deletedDate: Date;
 }
