@@ -7,7 +7,14 @@ const internalservererror = (res: ModifiedResponse) => {
 		data: null,
 	});
 };
-export default async (_req: Request, res: ModifiedResponse) => {
+export default async (req: Request, res: ModifiedResponse) => {
+	const id = req.query.id ? req.query.id : res.locals.user.id;
+	if (id === undefined)
+		return res.status(400).json({
+			message: "Invalid Request",
+			status: 400,
+			data: null,
+		});
 	const userkotobalist = await res.locals.database.schemas.kotoba
 		.find({
 			userid: res.locals.user.id,

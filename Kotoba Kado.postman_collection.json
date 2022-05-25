@@ -13,7 +13,7 @@
 				"header": [
 					{
 						"key": "authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODQ5NmU4MzFlZTFlZjg0NjhhZmQ5YyIsIm5hbWUiOiJzb3JhdGFiYWthIiwibmJmIjoxNjUzNDE1MjA4LCJpYXQiOjE2NTM0MTUyMDgsImV4cCI6MTY1NDYyNDgwOCwiYXVkIjoiaHR0cHM6Ly9rb3RvYmFrYWRvLmNvbSIsImlzcyI6Imh0dHBzOi8vYXBpLmtvdG9iYWthZG8uY29tIn0.zDLxe_0hD7YUW6YJK96zT1jixWKhYE47WJj9IMVUQIQ",
+						"value": "",
 						"type": "text"
 					}
 				],
@@ -29,16 +29,9 @@
 				"url": {
 					"raw": "http://localhost:3000/api/v1/kotoba/save",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "3000",
-					"path": [
-						"api",
-						"v1",
-						"kotoba",
-						"save"
-					]
+					"path": ["api", "v1", "kotoba", "save"]
 				}
 			},
 			"response": []
@@ -50,24 +43,16 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODQ5NmU4MzFlZTFlZjg0NjhhZmQ5YyIsIm5hbWUiOiJzb3JhdGFiYWthIiwibmJmIjoxNjUzNDE1MjA4LCJpYXQiOjE2NTM0MTUyMDgsImV4cCI6MTY1NDYyNDgwOCwiYXVkIjoiaHR0cHM6Ly9rb3RvYmFrYWRvLmNvbSIsImlzcyI6Imh0dHBzOi8vYXBpLmtvdG9iYWthZG8uY29tIn0.zDLxe_0hD7YUW6YJK96zT1jixWKhYE47WJj9IMVUQIQ",
+						"value": "",
 						"type": "text"
 					}
 				],
 				"url": {
 					"raw": "http://localhost:3000/api/v1/kotoba/detail/628d23c6a7a0b0cbd2565fc1",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "3000",
-					"path": [
-						"api",
-						"v1",
-						"kotoba",
-						"detail",
-						"628d23c6a7a0b0cbd2565fc1"
-					]
+					"path": ["api", "v1", "kotoba", "detail", "628d23c6a7a0b0cbd2565fc1"]
 				}
 			},
 			"response": []
@@ -82,7 +67,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODQ5NmU4MzFlZTFlZjg0NjhhZmQ5YyIsIm5hbWUiOiJzb3JhdGFiYWthIiwibmJmIjoxNjUzNDE1MjA4LCJpYXQiOjE2NTM0MTUyMDgsImV4cCI6MTY1NDYyNDgwOCwiYXVkIjoiaHR0cHM6Ly9rb3RvYmFrYWRvLmNvbSIsImlzcyI6Imh0dHBzOi8vYXBpLmtvdG9iYWthZG8uY29tIn0.zDLxe_0hD7YUW6YJK96zT1jixWKhYE47WJj9IMVUQIQ",
+						"value": "",
 						"type": "text"
 					}
 				],
@@ -98,16 +83,9 @@
 				"url": {
 					"raw": "http://localhost:3000/api/v1/kotoba/userlist",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "3000",
-					"path": [
-						"api",
-						"v1",
-						"kotoba",
-						"userlist"
-					]
+					"path": ["api", "v1", "kotoba", "userlist"]
 				}
 			},
 			"response": []
@@ -119,23 +97,16 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODQ5NmU4MzFlZTFlZjg0NjhhZmQ5YyIsIm5hbWUiOiJzb3JhdGFiYWthIiwibmJmIjoxNjUzNDE1MjA4LCJpYXQiOjE2NTM0MTUyMDgsImV4cCI6MTY1NDYyNDgwOCwiYXVkIjoiaHR0cHM6Ly9rb3RvYmFrYWRvLmNvbSIsImlzcyI6Imh0dHBzOi8vYXBpLmtvdG9iYWthZG8uY29tIn0.zDLxe_0hD7YUW6YJK96zT1jixWKhYE47WJj9IMVUQIQ",
+						"value": "",
 						"type": "text"
 					}
 				],
 				"url": {
 					"raw": "http://localhost:3000/api/v1/auth/detail",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "3000",
-					"path": [
-						"api",
-						"v1",
-						"auth",
-						"detail"
-					]
+					"path": ["api", "v1", "auth", "detail"]
 				}
 			},
 			"response": []
@@ -157,16 +128,9 @@
 				"url": {
 					"raw": "http://localhost:3000/api/v1/auth/login",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "3000",
-					"path": [
-						"api",
-						"v1",
-						"auth",
-						"login"
-					]
+					"path": ["api", "v1", "auth", "login"]
 				}
 			},
 			"response": []
@@ -179,16 +143,9 @@
 				"url": {
 					"raw": "http://localhost:3000/api/v1/auth/register",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "3000",
-					"path": [
-						"api",
-						"v1",
-						"auth",
-						"register"
-					]
+					"path": ["api", "v1", "auth", "register"]
 				}
 			},
 			"response": []
