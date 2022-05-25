@@ -17,7 +17,7 @@ export default async (req: Request, res: ModifiedResponse) => {
 		});
 	const userkotobalist = await res.locals.database.schemas.kotoba
 		.find({
-			userid: res.locals.user.id,
+			userid: id,
 		})
 		.catch(() => {
 			return undefined;
