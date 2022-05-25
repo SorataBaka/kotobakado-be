@@ -1,7 +1,6 @@
 import express, { Request, Response } from "express";
 import auth from "../../utils/auth";
 import save from "./save";
-import userlist from "./list";
 import kotobadetail from "./get";
 const kotobarouter = express.Router();
 kotobarouter.use(auth);
@@ -19,6 +18,5 @@ kotobarouter.all("/", (_req: Request, res: Response) => {
 	});
 });
 kotobarouter.post("/save", save);
-kotobarouter.get("/list", userlist);
-kotobarouter.get("/detail/:id", kotobadetail);
+kotobarouter.get("/get/:id", kotobadetail);
 export default kotobarouter;

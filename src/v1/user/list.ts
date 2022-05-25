@@ -8,23 +8,26 @@ const internalservererror = (res: ModifiedResponse) => {
 	});
 };
 export default async (req: Request, res: ModifiedResponse) => {
-	const pagequery = req.query["page"]
-		? parseInt(req.query["page"] as string, 10)
-		: 1;
-	const kotobalist = await res.locals.database.schemas.kotoba
-		.find({ deletedDate: null })
-		.limit(10)
-		.sort("-createdDate")
-		.skip((pagequery - 1) * 10)
+	const id = req.query.id ? req.query.id : res.locals.user.id;
+	if (id === undefined)
+		return res.status(400).json({
+			message: "Invalid Request",
+			status: 400,
+			data: null,
+		});
+	const userkotobalist = await res.locals.database.schemas.kotoba
+		.find({
+			userid: id,
+		})
 		.catch(() => {
 			return undefined;
 		});
-	if (kotobalist === undefined) return internalservererror(res);
+	if (userkotobalist === undefined) return internalservererror(res);
 	return res.status(200).json({
 		message: "success",
 		status: 200,
 		data: Array.from(
-			kotobalist.map((kotoba) => {
+			userkotobalist.map((kotoba) => {
 				return {
 					id: kotoba._id,
 					kotobaname: kotoba.kotobaname,
